@@ -9,13 +9,18 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "sass": "^1.71.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint:style": "stylelint **/*.{scss,css}",
+    "lint:style:fix": "stylelint **/*.scss --fix",
+    "lint": "eslint \"./**/*.{ts,tsx,js,jsx}\"",
+    "lint:fix": "eslint \"./**/*.{ts,tsx,js,jsx}\" --fix --color"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +39,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@wemake-services/eslint-config-javascript": "^2.1.1"
   }
 }
